@@ -1,0 +1,64 @@
+<!<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+
+    <a-assets>
+      <a-asset item id="halo_obj" src="obj/Halo_01(1).obj"></a-asset>
+      <a-asset item id="halo_mtl" src="obj/Halo_01.mtl"></a-asset>
+    </a-assets>
+
+    <!-- Entities Infront - Entrance -->
+
+    <a-text value="WELCOME" align="center" position="0 2.8 -4" letter-spacing="5" width="15" height="18" color="black">
+
+    </a-text>
+
+    <!-- Pillars -->
+    <a-cylinder color="black" height="2" radius="0.1" position="1 1 -5"></a-cylinder>
+    <a-cylinder color="black" height="2" radius="0.1" position="-1 1 -5"></a-cylinder>
+
+    <!-- Rings -->
+    <a-torus position="0 4 -10" color="red" radius="5">
+      <a-animation attribute="rotation" repeat="indefinite" to="0 0 360" dur="5000" easing="linear"></a-animation>
+    </a-torus>
+    <a-torus position="0 4 -10" color="green" radius="6">
+      <a-animation attribute="rotation" repeat="indefinite" to="0 0 -360" dur="5000" easing="linear"></a-animation>
+    </a-torus>
+    <a-torus position="0 4 -10" color="blue" radius="7">
+      <a-animation attribute="rotation" repeat="indefinite" to="0 0 360" dur="5000" easing="linear"></a-animation>
+    </a-torus>
+    <a-torus position="0 4 -10" color="orange" radius="8">
+      <a-animation attribute="rotation" repeat="indefinite" to="0 0 -360" dur="5000" easing="linear"></a-animation>
+    </a-torus>
+
+    <!-- Floor -->
+    <a-plane position="0 0 -4" rotation="-90 0 0" color="grey" width="5" height="10"></a-plane>
+
+    <!-- banner -->
+    <a-box color="white" width="5" height="2" depth="0.2" position="0 3 -5"></a-box>
+
+    <a-camera position="0 0 0">
+      <a-cursor color="#000">
+      </a-cursor>
+    </a-camera>
+
+    <a-sky color="lightblue"></a-sky>
+
+    <!-- Entities at the side -->
+
+
+    <!-- Entities at the end -->
+
+  </a-scene>
+</body>
